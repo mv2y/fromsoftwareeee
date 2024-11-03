@@ -1,76 +1,117 @@
-/* Reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    direction: rtl;
-    text-align: right;
 }
 
-/* Header */
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
+/* Body */
+body {
+    background-color: #111;
+    color: #f1f1f1;
+    line-height: 1.6;
 }
 
-.header nav ul {
+/* Header Styling */
+header {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    color: #FFD700;
+    font-size: 2.5rem;
+}
+
+header nav ul {
     display: flex;
+    justify-content: center;
     list-style: none;
-    gap: 15px;
+    margin-top: 10px;
 }
 
-.header nav ul li a {
-    color: #fff;
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #f1f1f1;
     text-decoration: none;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
-.header nav ul li a:hover {
-    color: #ffb700;
+header nav ul li a:hover {
+    color: #FFD700;
 }
 
-/* Sections */
-.intro, .games {
-    padding: 2rem;
-    margin: 1rem auto;
-}
-
-.games .game-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: space-around;
-}
-
-.game-item {
-    width: 45%;
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
+/* Section Styling */
+section {
+    padding: 50px 20px;
     text-align: center;
 }
 
-.game-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+section h2 {
+    color: #FFD700;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-.game-item:hover {
-    transform: scale(1.05);
+section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+/* Games Section */
+#games ul {
+    list-style: none;
+    padding: 0;
+}
+
+#games ul li {
+    background: #222;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+#games ul li:hover {
+    transform: scale(1.03);
+}
+
+#games ul li h3 {
+    color: #FFD700;
+    font-size: 1.5rem;
 }
 
 /* Footer */
-.footer {
+footer {
+    background-color: #222;
+    color: #f1f1f1;
+    padding: 15px;
     text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
+    font-size: 0.9rem;
+    position: sticky;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Button Hover Effect */
+button, a {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover, a:hover {
+    transform: scale(1.05);
 }
